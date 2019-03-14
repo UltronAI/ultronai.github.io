@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://gaofeng.tech/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ultronai.github.io/tags/index.html</loc>
+    <loc>https://gaofeng.tech/tags/index.html</loc>
     
     <lastmod>2019-03-14T11:23:59.489Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ultronai.github.io/categories/index.html</loc>
+    <loc>https://gaofeng.tech/categories/index.html</loc>
     
     <lastmod>2019-03-14T11:23:52.108Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ultronai.github.io/2019/03/13/Two-NN-based-VIO-Methods/</loc>
+    <loc>https://gaofeng.tech/2019/03/13/Two-NN-based-VIO-Methods/</loc>
     
     <lastmod>2019-03-14T11:23:35.762Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ultronai.github.io/about/index.html</loc>
+    <loc>https://gaofeng.tech/about/index.html</loc>
     
     <lastmod>2019-03-13T02:11:47.033Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ultronai.github.io/2019/03/13/hello-world/</loc>
+    <loc>https://gaofeng.tech/2019/03/13/hello-world/</loc>
     
     <lastmod>2019-03-13T00:52:29.032Z</lastmod>
     
