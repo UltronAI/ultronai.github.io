@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="VIO,CVPR2019,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Feng&#39;s Blog">
-<meta property="og:url" content="http://gaofeng.tech/tags/index.html">
+<meta name="description" content="Paper-reading note about a CVPR’19 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to esti">
+<meta name="keywords" content="VIO,CVPR2019">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry">
+<meta property="og:url" content="http://gaofeng.tech/2019/03/16/CVPR2019-Selective-Fusion-for-Neural-Visual-Inertial-Odometry/index.html">
 <meta property="og:site_name" content="Feng&#39;s Blog">
+<meta property="og:description" content="Paper-reading note about a CVPR’19 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to esti">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-14T11:23:59.489Z">
+<meta property="og:updated_time" content="2019-03-16T00:21:29.497Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Feng&#39;s Blog">
+<meta name="twitter:title" content="[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry">
+<meta name="twitter:description" content="Paper-reading note about a CVPR’19 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to esti">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://gaofeng.tech/tags/">
+  <link rel="canonical" href="http://gaofeng.tech/2019/03/16/CVPR2019-Selective-Fusion-for-Neural-Visual-Inertial-Odometry/">
 
 
 
 
 
-  <title>Tag | Feng's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry | Feng's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -279,40 +283,168 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://gaofeng.tech/2019/03/16/CVPR2019-Selective-Fusion-for-Neural-Visual-Inertial-Odometry/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Feng Gao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feng's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                3 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/CVPR2019/" style="font-size: 12px; color: #ccc">CVPR2019</a> <a href="/tags/VIO/" style="font-size: 30px; color: #111">VIO</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-16T08:15:09+08:00">
+                2019-03-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-reading/" itemprop="url" rel="index">
+                    <span itemprop="name">paper-reading</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Paper-reading note about a CVPR’19 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to estimate the trajectory whilst improving robustness to real-life issues, such as missing and corrupted data or bad sensor synchronization.<br><a id="more"></a></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VIO/" rel="tag"># VIO</a>
+          
+            <a href="/tags/CVPR2019/" rel="tag"># CVPR2019</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/13/Two-NN-based-VIO-Methods/" rel="next" title="Two NN-based VIO Methods">
+                <i class="fa fa-chevron-left"></i> Two NN-based VIO Methods
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 

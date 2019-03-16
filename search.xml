@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry]]></title>
+    <url>%2F2019%2F03%2F16%2FCVPR2019-Selective-Fusion-for-Neural-Visual-Inertial-Odometry%2F</url>
+    <content type="text"><![CDATA[Paper-reading note about a CVPR’19 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to estimate the trajectory whilst improving robustness to real-life issues, such as missing and corrupted data or bad sensor synchronization.]]></content>
+      <categories>
+        <category>paper-reading</category>
+      </categories>
+      <tags>
+        <tag>VIO</tag>
+        <tag>CVPR2019</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Two NN-based VIO Methods]]></title>
     <url>%2F2019%2F03%2F13%2FTwo-NN-based-VIO-Methods%2F</url>
     <content type="text"><![CDATA[Notes about two NN-based VIO methods:1) VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem2) Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction 1. VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problemhttps://arxiv.org/pdf/1701.08376.pdf 主要贡献 第一个端到端训练的VIO系统，把VIO看做是Seq2Seq的回归问题 利用RNN（LSTM）提取序列中的时序变化关系，先通过CNN提取图像的特征，然后与LSTM提取的IMU特征拼接起来，再通过另一个LSTM输出最终的pose，通过两个LSTM解决了IMU的频率高于相机频率的问题，即利用LSTM实现了类似pre-integration的作用 其实就是利用RNN避免了复杂的动力学建模 提出了一个新的可微的位姿concat层，它允许网络的预测符合SE(3)流形的结构（输出更易得到的se(3)，然后通过exp层得到SE(3)） 网络结构网络输入单目相机的前后两帧RGB图像，和6D的IMU数据（3D加速度和3D角速度），网络输出为7D的矢量（3D的位移矢量和表示旋转的四元数） 实现细节 使用两层的LSTM，含有1000个cell 在前向时CNN部分消耗了160ms($\approx10Hz$)左右的时间，而LSTM部分可以超过200Hz，都是在Tesla k80上测得的结果 分别使用se(3)和SE(3)计算了loss，在训练初期SE(3)的loss比重小，后期增大 存在的问题 论文中对于精度的说明不太多，对比的也不是目前精度最好的结果 仍然需要相机和IMU之间的外部标定参数，而且是有监督的训练（这个评价来自下面的Vision-Aided ATE）# 标定参数是怎么用到的我还没有发现，可以在之后尝试的时候关注一下… 2. Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correctionhttps://arxiv.org/pdf/1803.05850.pdf 主要贡献 提出了一种在线纠错的方法，可以提高模型的鲁棒性 不需要使用IMU的内参和与相机之间标定的外参 松散的相机和IMU的时间同步 使用无监督训练框架实现VIO系统 网络结构 Overview Details通过CNN先对输入的IMU数据进行处理，先输出对pose的粗略估计，然后与source RGB-D image和source coordinates通过STN进行图像重建，将重建误差求Jacobian，然后再将Jacobian输入到下一个level，实现增量估计，逐个level传递后，使用每个level的位姿估计中重建误差最小的位姿作为最后的输出，在inference时也输出多个尺寸，然后取其最优，即所谓的online correction. 实验结果基本除了比ORB-SLAM2要差，和其他方法比还是有优势的，不过没有和VINS系统的对比结果 存在的问题 使用RGB-D作为输入，可以考虑使用SfM的方法，通过网络预测深度图，从而实现基于纯单目RGB相机的VIO 前向时输出多个尺寸，相当于增加了几倍的计算量，论文中没有给出时间的结果，感觉不能做的很快 IMU本身就能推出一个粗略的位姿，使用CNN处理IMU数据是不是合适？可以之后尝试一下（#TODO） 对比及思考 两篇文章都没有使用复杂的动力学建模，而是分别使用LSTM和CNN“简化”了IMU数据的处理过程，目前看效果也还可以，不过IMU本身可以推断出两个自由度的位姿（pitch&amp;roll），利用数学建模和深度网络结合是不是会更稳妥？ 使用无监督估计深度和位姿，然后将深度图与输入的RGB图放在一起即可使用原本基于RGB-D图像的方法，之后可以多看看这方面的东西 对于多机mapping，如果基于深度图建图，能不能利用深度预测网络的bottleneck特征作为传输数据，然后在接收后decoder，也许还能对特征进一步压缩，或许可行？ 直觉上看，LSTM应该更适合这种基于视频帧的任务，可以主要尝试一下]]></content>
