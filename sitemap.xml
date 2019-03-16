@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gaofeng.tech/2019/03/13/Two-NN-based-VIO-Methods/</loc>
+    
+    <lastmod>2019-03-16T01:02:20.560Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gaofeng.tech/tags/index.html</loc>
     
     <lastmod>2019-03-14T11:23:59.489Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://gaofeng.tech/categories/index.html</loc>
     
     <lastmod>2019-03-14T11:23:52.108Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gaofeng.tech/2019/03/13/Two-NN-based-VIO-Methods/</loc>
-    
-    <lastmod>2019-03-14T11:23:35.762Z</lastmod>
     
   </url>
   

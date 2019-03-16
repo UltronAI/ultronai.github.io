@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://gaofeng.tech/assets/posts/2019-03-10/1552229061932.png">
 <meta property="og:image" content="http://gaofeng.tech/assets/posts/2019-03-10/1552229359674.png">
 <meta property="og:image" content="http://gaofeng.tech/assets/posts/2019-03-10/1552229380937.png">
-<meta property="og:updated_time" content="2019-03-14T11:23:35.762Z">
+<meta property="og:updated_time" content="2019-03-16T01:02:20.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Two NN-based VIO Methods">
 <meta name="twitter:description" content="Notes about two NN-based VIO methods:1) VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem2) Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with">
@@ -394,8 +394,8 @@
 
       
         <p>Notes about two NN-based VIO methods:<br>1) VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem<br>2) Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction<br><a id="more"></a></p>
-<h2 id="1-VINet-Visual-Inertial-Odometry-as-a-Sequence-to-Sequence-Learning-Problem"><a href="#1-VINet-Visual-Inertial-Odometry-as-a-Sequence-to-Sequence-Learning-Problem" class="headerlink" title="1. VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem"></a>1. VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem</h2><p><a href="https://arxiv.org/pdf/1701.08376.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1701.08376.pdf</a></p>
-<h3 id="主要贡献"><a href="#主要贡献" class="headerlink" title="主要贡献"></a>主要贡献</h3><ol>
+<h1 id="VINet-Visual-Inertial-Odometry-as-a-Sequence-to-Sequence-Learning-Problem"><a href="#VINet-Visual-Inertial-Odometry-as-a-Sequence-to-Sequence-Learning-Problem" class="headerlink" title="VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem"></a>VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem</h1><p><a href="https://arxiv.org/pdf/1701.08376.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1701.08376.pdf</a></p>
+<h2 id="主要贡献"><a href="#主要贡献" class="headerlink" title="主要贡献"></a>主要贡献</h2><ol>
 <li>第一个端到端训练的VIO系统，把VIO看做是Seq2Seq的回归问题</li>
 <li>利用RNN（LSTM）提取序列中的时序变化关系，先通过CNN提取图像的特征，然后与LSTM提取的IMU特征拼接起来，再通过另一个LSTM输出最终的pose，通过两个LSTM解决了IMU的频率高于相机频率的问题，即利用LSTM实现了类似pre-integration的作用<ul>
 <li>其实就是利用RNN避免了复杂的动力学建模<br><img src="/assets/posts/2019-03-10/1552227683915.png" width="60%"></li>
@@ -403,34 +403,34 @@
 </li>
 <li>提出了一个新的可微的位姿concat层，它允许网络的预测符合SE(3)流形的结构（输出更易得到的se(3)，然后通过exp层得到SE(3)）<br><img src="/assets/posts/2019-03-10/1552226919489.png" width="50%"></li>
 </ol>
-<h3 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h3><p><img src="/assets/posts/2019-03-10/1552227315660.png" width="90%"><br>网络输入单目相机的前后两帧RGB图像，和6D的IMU数据（3D加速度和3D角速度），网络输出为7D的矢量（3D的位移矢量和表示旋转的四元数）</p>
-<h3 id="实现细节"><a href="#实现细节" class="headerlink" title="实现细节"></a>实现细节</h3><ol>
+<h2 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h2><p><img src="/assets/posts/2019-03-10/1552227315660.png" width="90%"><br>网络输入单目相机的前后两帧RGB图像，和6D的IMU数据（3D加速度和3D角速度），网络输出为7D的矢量（3D的位移矢量和表示旋转的四元数）</p>
+<h2 id="实现细节"><a href="#实现细节" class="headerlink" title="实现细节"></a>实现细节</h2><ol>
 <li>使用两层的LSTM，含有1000个cell</li>
 <li>在前向时CNN部分消耗了160ms($\approx10Hz$)左右的时间，而LSTM部分可以超过200Hz，都是在Tesla k80上测得的结果</li>
 <li>分别使用se(3)和SE(3)计算了loss，在训练初期SE(3)的loss比重小，后期增大<br><img src="/assets/posts/2019-03-10/1552227989493.png" width="50%"></li>
 </ol>
-<h3 id="存在的问题"><a href="#存在的问题" class="headerlink" title="存在的问题"></a>存在的问题</h3><ol>
+<h2 id="存在的问题"><a href="#存在的问题" class="headerlink" title="存在的问题"></a>存在的问题</h2><ol>
 <li>论文中对于精度的说明不太多，对比的也不是目前精度最好的结果</li>
 <li>仍然需要相机和IMU之间的外部标定参数，而且是有监督的训练（这个评价来自下面的Vision-Aided ATE）# 标定参数是怎么用到的我还没有发现，可以在之后尝试的时候关注一下…</li>
 </ol>
-<h2 id="2-Vision-Aided-Absolute-Trajectory-Estimation-Using-an-Unsupervised-Deep-Network-with-Online-Error-Correction"><a href="#2-Vision-Aided-Absolute-Trajectory-Estimation-Using-an-Unsupervised-Deep-Network-with-Online-Error-Correction" class="headerlink" title="2. Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction"></a>2. Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction</h2><p><a href="https://arxiv.org/pdf/1803.05850.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1803.05850.pdf</a></p>
-<h3 id="主要贡献-1"><a href="#主要贡献-1" class="headerlink" title="主要贡献"></a>主要贡献</h3><ol>
+<h1 id="Vision-Aided-Absolute-Trajectory-Estimation-Using-an-Unsupervised-Deep-Network-with-Online-Error-Correction"><a href="#Vision-Aided-Absolute-Trajectory-Estimation-Using-an-Unsupervised-Deep-Network-with-Online-Error-Correction" class="headerlink" title="Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction"></a>Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction</h1><p><a href="https://arxiv.org/pdf/1803.05850.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1803.05850.pdf</a></p>
+<h2 id="主要贡献-1"><a href="#主要贡献-1" class="headerlink" title="主要贡献"></a>主要贡献</h2><ol>
 <li>提出了一种在线纠错的方法，可以提高模型的鲁棒性</li>
 <li>不需要使用IMU的内参和与相机之间标定的外参</li>
 <li>松散的相机和IMU的时间同步</li>
 <li>使用无监督训练框架实现VIO系统</li>
 </ol>
-<h3 id="网络结构-1"><a href="#网络结构-1" class="headerlink" title="网络结构"></a>网络结构</h3><ol>
+<h2 id="网络结构-1"><a href="#网络结构-1" class="headerlink" title="网络结构"></a>网络结构</h2><ol>
 <li>Overview<br><img src="/assets/posts/2019-03-10/1552228696384.png" width="50%"></li>
 <li>Details<br><img src="/assets/posts/2019-03-10/1552228745130.png" width="70%"><br><img src="/assets/posts/2019-03-10/1552229061932.png" width="80%"><br>通过CNN先对输入的IMU数据进行处理，先输出对pose的粗略估计，然后与source RGB-D image和source coordinates通过STN进行图像重建，将重建误差求Jacobian，然后再将Jacobian输入到下一个level，实现增量估计，逐个level传递后，使用每个level的位姿估计中重建误差最小的位姿作为最后的输出，在inference时也输出多个尺寸，然后取其最优，即所谓的online correction.</li>
 </ol>
-<h3 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h3><p><img src="/assets/posts/2019-03-10/1552229359674.png" width="80%"><br><img src="/assets/posts/2019-03-10/1552229380937.png" width="80%"><br>基本除了比ORB-SLAM2要差，和其他方法比还是有优势的，不过没有和VINS系统的对比结果</p>
-<h3 id="存在的问题-1"><a href="#存在的问题-1" class="headerlink" title="存在的问题"></a>存在的问题</h3><ol>
+<h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><p><img src="/assets/posts/2019-03-10/1552229359674.png" width="80%"><br><img src="/assets/posts/2019-03-10/1552229380937.png" width="80%"><br>基本除了比ORB-SLAM2要差，和其他方法比还是有优势的，不过没有和VINS系统的对比结果</p>
+<h2 id="存在的问题-1"><a href="#存在的问题-1" class="headerlink" title="存在的问题"></a>存在的问题</h2><ol>
 <li>使用RGB-D作为输入，可以考虑使用SfM的方法，通过网络预测深度图，从而实现基于纯单目RGB相机的VIO</li>
 <li>前向时输出多个尺寸，相当于增加了几倍的计算量，论文中没有给出时间的结果，感觉不能做的很快</li>
 <li>IMU本身就能推出一个粗略的位姿，使用CNN处理IMU数据是不是合适？可以之后尝试一下（#TODO）</li>
 </ol>
-<h2 id="对比及思考"><a href="#对比及思考" class="headerlink" title="对比及思考"></a>对比及思考</h2><ol>
+<h1 id="对比及思考"><a href="#对比及思考" class="headerlink" title="对比及思考"></a>对比及思考</h1><ol>
 <li>两篇文章都没有使用复杂的动力学建模，而是分别使用LSTM和CNN“简化”了IMU数据的处理过程，目前看效果也还可以，不过IMU本身可以推断出两个自由度的位姿（pitch&amp;roll），利用数学建模和深度网络结合是不是会更稳妥？</li>
 <li>使用无监督估计深度和位姿，然后将深度图与输入的RGB图放在一起即可使用原本基于RGB-D图像的方法，之后可以多看看这方面的东西</li>
 <li>对于多机mapping，如果基于深度图建图，能不能利用深度预测网络的bottleneck特征作为传输数据，然后在接收后decoder，也许还能对特征进一步压缩，或许可行？</li>
@@ -658,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-VINet-Visual-Inertial-Odometry-as-a-Sequence-to-Sequence-Learning-Problem"><span class="nav-number">1.</span> <span class="nav-text">1. VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要贡献"><span class="nav-number">1.1.</span> <span class="nav-text">主要贡献</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络结构"><span class="nav-number">1.2.</span> <span class="nav-text">网络结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现细节"><span class="nav-number">1.3.</span> <span class="nav-text">实现细节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存在的问题"><span class="nav-number">1.4.</span> <span class="nav-text">存在的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Vision-Aided-Absolute-Trajectory-Estimation-Using-an-Unsupervised-Deep-Network-with-Online-Error-Correction"><span class="nav-number">2.</span> <span class="nav-text">2. Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主要贡献-1"><span class="nav-number">2.1.</span> <span class="nav-text">主要贡献</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络结构-1"><span class="nav-number">2.2.</span> <span class="nav-text">网络结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实验结果"><span class="nav-number">2.3.</span> <span class="nav-text">实验结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存在的问题-1"><span class="nav-number">2.4.</span> <span class="nav-text">存在的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对比及思考"><span class="nav-number">3.</span> <span class="nav-text">对比及思考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VINet-Visual-Inertial-Odometry-as-a-Sequence-to-Sequence-Learning-Problem"><span class="nav-number">1.</span> <span class="nav-text">VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要贡献"><span class="nav-number">1.1.</span> <span class="nav-text">主要贡献</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络结构"><span class="nav-number">1.2.</span> <span class="nav-text">网络结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现细节"><span class="nav-number">1.3.</span> <span class="nav-text">实现细节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存在的问题"><span class="nav-number">1.4.</span> <span class="nav-text">存在的问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vision-Aided-Absolute-Trajectory-Estimation-Using-an-Unsupervised-Deep-Network-with-Online-Error-Correction"><span class="nav-number">2.</span> <span class="nav-text">Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要贡献-1"><span class="nav-number">2.1.</span> <span class="nav-text">主要贡献</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络结构-1"><span class="nav-number">2.2.</span> <span class="nav-text">网络结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验结果"><span class="nav-number">2.3.</span> <span class="nav-text">实验结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存在的问题-1"><span class="nav-number">2.4.</span> <span class="nav-text">存在的问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对比及思考"><span class="nav-number">3.</span> <span class="nav-text">对比及思考</span></a></li></ol></div>
             
 
           </div>
