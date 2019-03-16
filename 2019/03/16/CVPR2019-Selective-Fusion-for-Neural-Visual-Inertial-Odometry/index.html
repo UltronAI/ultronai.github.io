@@ -67,7 +67,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="VIO,CVPR2019,">
 
 
 
@@ -78,13 +78,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Feng&#39;s Blog">
-<meta property="og:url" content="http://gaofeng.tech/categories/blog-building/index.html">
+<meta name="description" content="Paper-reading note about a CVPR2019 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to est">
+<meta name="keywords" content="VIO,CVPR2019">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry">
+<meta property="og:url" content="http://gaofeng.tech/2019/03/16/CVPR2019-Selective-Fusion-for-Neural-Visual-Inertial-Odometry/index.html">
 <meta property="og:site_name" content="Feng&#39;s Blog">
+<meta property="og:description" content="Paper-reading note about a CVPR2019 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to est">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-16T01:13:07.328Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Feng&#39;s Blog">
+<meta name="twitter:title" content="[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry">
+<meta name="twitter:description" content="Paper-reading note about a CVPR2019 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to est">
 
 
 
@@ -114,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://gaofeng.tech/categories/blog-building/">
+  <link rel="canonical" href="http://gaofeng.tech/2019/03/16/CVPR2019-Selective-Fusion-for-Neural-Visual-Inertial-Odometry/">
 
 
 
 
 
-  <title>Category: blog-building | Feng's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry | Feng's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -139,7 +144,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -275,53 +280,185 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>blog-building<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://gaofeng.tech/2019/03/16/CVPR2019-Selective-Fusion-for-Neural-Visual-Inertial-Odometry/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Feng Gao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feng's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/03/13/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-13T00:00:00+08:00" content="2019-03-13">
-          03-13
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-16T08:15:09+08:00">
+                2019-03-16
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-reading/" itemprop="url" rel="index">
+                    <span itemprop="name">paper-reading</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Paper-reading note about a CVPR2019 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to estimate the trajectory whilst improving robustness to real-life issues, such as missing and corrupted data or bad sensor synchronization.<br><a id="more"></a></p>
+<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><ol>
+<li><p>Neuroscience:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Humans are able to perceive their self-motion through space via multimodal perceptions. Optical flow (visual cues) and vestibular signals (inertial motion sense) are the two most sensitive cues for determining self-motion.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Problem of previous feature-based methods:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a. Naively using all features before fusion will lead to unreliable state estimation, as incorrect feature extraction or matching cripples the entire system.</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b. Real issues which can and do occur include camera occlusion or operation in low-light conditions, excess noise or drift within the inertial sensor, time-synchronization between the two streams or spatial misalignment</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Problem of previous nn-based methods:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Without considering possible sensor errors, all features are directly fed into other modules for further pose regression in [4, 7, 18] (Vision-only), or simply concatenated as in [30] (VINet). These factors can possibly cause troubles to the accuracy and safety of VIO systems, when the input data are corrupted or missing.</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>#</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VIO/" rel="tag"># VIO</a>
+          
+            <a href="/tags/CVPR2019/" rel="tag"># CVPR2019</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/13/Two-NN-based-VIO-Methods/" rel="next" title="Two NN-based VIO Methods">
+                <i class="fa fa-chevron-left"></i> Two NN-based VIO Methods
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -329,6 +466,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -349,8 +490,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -462,6 +612,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -595,6 +761,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
