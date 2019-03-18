@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="VIO,CVPR2019,">
+  <meta name="keywords" content="VIO,">
 
 
 
@@ -82,18 +82,40 @@
 
 
 
-<meta name="description" content="Paper-reading note about a CVPR2019 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to est">
-<meta name="keywords" content="VIO,CVPR2019">
+<meta name="description" content="Notes about some feature-based and NN-based Visual-Inertial Odometry Systems:  On-Manifold Preintegration for Real-Time Visual-Inertial Odometry. (IEEE Trans. on Robotics) VINS-Mono: A Robust and Vers">
+<meta name="keywords" content="VIO">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry">
-<meta property="og:url" content="http://gaofeng.tech/2019/03/16/CVPR2019-Selective-Fusion-for-Neural-Visual-Inertial-Odometry/index.html">
+<meta property="og:title" content="Monocular Visual-Odometry SLAM System">
+<meta property="og:url" content="http://gaofeng.tech/2019/03/18/Monocular-Visual-Odometry-SLAM-System/index.html">
 <meta property="og:site_name" content="Feng&#39;s Blog">
-<meta property="og:description" content="Paper-reading note about a CVPR2019 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to est">
+<meta property="og:description" content="Notes about some feature-based and NN-based Visual-Inertial Odometry Systems:  On-Manifold Preintegration for Real-Time Visual-Inertial Odometry. (IEEE Trans. on Robotics) VINS-Mono: A Robust and Vers">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-16T08:11:38.276Z">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_01.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_02.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_03.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_04.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_05.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_06.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_07.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_08.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_09.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_10.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_11.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_12.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_13.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_14.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_15.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_16.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_17.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_18.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_19.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_20.png">
+<meta property="og:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_21.png">
+<meta property="og:updated_time" content="2019-03-18T06:57:22.850Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry">
-<meta name="twitter:description" content="Paper-reading note about a CVPR2019 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to est">
+<meta name="twitter:title" content="Monocular Visual-Odometry SLAM System">
+<meta name="twitter:description" content="Notes about some feature-based and NN-based Visual-Inertial Odometry Systems:  On-Manifold Preintegration for Real-Time Visual-Inertial Odometry. (IEEE Trans. on Robotics) VINS-Mono: A Robust and Vers">
+<meta name="twitter:image" content="http://gaofeng.tech/assets/posts/VIO_0318/vio_页面_01.png">
 
 
 
@@ -123,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://gaofeng.tech/2019/03/16/CVPR2019-Selective-Fusion-for-Neural-Visual-Inertial-Odometry/">
+  <link rel="canonical" href="http://gaofeng.tech/2019/03/18/Monocular-Visual-Odometry-SLAM-System/">
 
 
 
 
 
-  <title>[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry | Feng's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Monocular Visual-Odometry SLAM System | Feng's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -298,7 +320,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://gaofeng.tech/2019/03/16/CVPR2019-Selective-Fusion-for-Neural-Visual-Inertial-Odometry/">
+    <link itemprop="mainEntityOfPage" href="http://gaofeng.tech/2019/03/18/Monocular-Visual-Odometry-SLAM-System/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feng Gao">
@@ -315,7 +337,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[CVPR2019] Selective Fusion for Neural Visual-Inertial Odometry</h1>
+          <h1 class="post-title" itemprop="name headline">Monocular Visual-Odometry SLAM System</h1>
         
 
         <div class="post-meta">
@@ -327,8 +349,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-16T08:15:09+08:00">
-                2019-03-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-18T14:47:19+08:00">
+                2019-03-18
               </time>
             
 
@@ -352,6 +374,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/paper-reading/" itemprop="url" rel="index">
                     <span itemprop="name">paper-reading</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-reading/survey/" itemprop="url" rel="index">
+                    <span itemprop="name">survey</span>
                   </a>
                 </span>
 
@@ -387,15 +420,18 @@
       
 
       
-        <p>Paper-reading note about a CVPR2019 paper, which proposes a novel end-to-end selective sensor fusion framework for monocular VIO, which fuses monocular images and inertial measurements in order to estimate the trajectory whilst improving robustness to real-life issues, such as missing and corrupted data or bad sensor synchronization.<br><a id="more"></a></p>
-<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><ol>
-<li><p>Neuroscience:<br><code>Humans are able to perceive their self-motion through space via multimodal perceptions. Optical flow (visual cues) and vestibular signals (inertial motion sense) are the two most sensitive cues for determining self-motion.</code></p>
+        <p>Notes about some feature-based and NN-based Visual-Inertial Odometry Systems:</p>
+<ul>
+<li>On-Manifold Preintegration for Real-Time Visual-Inertial Odometry. (IEEE Trans. on Robotics)</li>
+<li>VINS-Mono: A Robust and Versatile Monocular Visual-Inertial State Estimator. (IEEE Trans. on Robotics)</li>
+<li>Online Temporal Calibration for Monocular Visual-Inertial Systems. (IROS 2018)</li>
+<li>VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem. (AAAI 2017)</li>
+<li>Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction. (IROS 2018)</li>
+<li>Selective Sensor Fusion for Neural Visual-Inertial Odometry. (CVPR 2019)<a id="more"></a>
 </li>
-<li><p>Problem of previous feature-based methods:<br><code>a. Naively using all features before fusion will lead to unreliable state estimation, as incorrect feature extraction or matching cripples the entire system.</code><br><code>b. Real issues which can and do occur include camera occlusion or operation in low-light conditions, excess noise or drift within the inertial sensor, time-synchronization between the two streams or spatial misalignment</code></p>
-</li>
-<li>Problem of previous nn-based methods:<br><code>Without considering possible sensor errors, all features are directly fed into other modules for further pose regression in [4, 7, 18] (Vision-only), or simply concatenated as in [30] (VINet). These factors can possibly cause troubles to the accuracy and safety of VIO systems, when the input data are corrupted or missing.</code></li>
-</ol>
-<h1 id="Contributions"><a href="#Contributions" class="headerlink" title="Contributions"></a>Contributions</h1>
+</ul>
+<p><img src="/assets/posts/VIO_0318/vio_页面_01.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_02.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_03.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_04.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_05.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_06.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_07.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_08.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_09.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_10.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_11.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_12.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_13.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_14.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_15.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_16.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_17.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_18.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_19.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_20.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_21.png" alt></p>
+
       
     </div>
     
@@ -413,8 +449,6 @@
         <div class="post-tags">
           
             <a href="/tags/VIO/" rel="tag"># VIO</a>
-          
-            <a href="/tags/CVPR2019/" rel="tag"># CVPR2019</a>
           
         </div>
       
@@ -442,8 +476,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/13/Two-NN-based-VIO-Methods/" rel="next" title="Two NN-based VIO Methods">
-                <i class="fa fa-chevron-left"></i> Two NN-based VIO Methods
+              <a href="/2019/03/16/Cardiopulmonary-resuscitation-CPR/" rel="next" title="Cardiopulmonary resuscitation (CPR)">
+                <i class="fa fa-chevron-left"></i> Cardiopulmonary resuscitation (CPR)
               </a>
             
           </div>
@@ -451,10 +485,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/16/Cardiopulmonary-resuscitation-CPR/" rel="prev" title="Cardiopulmonary resuscitation (CPR)">
-                Cardiopulmonary resuscitation (CPR) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -506,17 +536,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -542,7 +563,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -553,7 +574,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -628,22 +649,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Contributions"><span class="nav-number">2.</span> <span class="nav-text">Contributions</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
