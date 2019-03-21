@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gaofeng.tech/about/index.html</loc>
+    
+    <lastmod>2019-03-21T01:22:56.437Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gaofeng.tech/2019/03/19/Some-Key-Publications-of-NICS-EFC-Lab/</loc>
     
     <lastmod>2019-03-19T01:27:54.837Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://gaofeng.tech/categories/index.html</loc>
     
     <lastmod>2019-03-14T11:23:52.108Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gaofeng.tech/about/index.html</loc>
-    
-    <lastmod>2019-03-13T02:11:47.033Z</lastmod>
     
   </url>
   
