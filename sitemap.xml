@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gaofeng.tech/2019/03/16/Cardiopulmonary-resuscitation-CPR/</loc>
+    
+    <lastmod>2019-03-23T06:24:27.321Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gaofeng.tech/2019/03/13/Two-NN-based-VIO-Methods/</loc>
     
     <lastmod>2019-03-23T05:58:02.533Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://gaofeng.tech/2019/03/18/Monocular-Visual-Odometry-SLAM-System/</loc>
     
     <lastmod>2019-03-23T05:57:48.756Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gaofeng.tech/2019/03/16/Cardiopulmonary-resuscitation-CPR/</loc>
-    
-    <lastmod>2019-03-23T05:54:42.094Z</lastmod>
     
   </url>
   
