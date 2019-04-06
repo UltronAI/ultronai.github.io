@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gaofeng.tech/about/index.html</loc>
+    
+    <lastmod>2019-04-06T07:09:39.063Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gaofeng.tech/2019/03/16/Cardiopulmonary-resuscitation-CPR/</loc>
     
     <lastmod>2019-03-23T06:24:27.321Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://gaofeng.tech/2019/03/18/Monocular-Visual-Odometry-SLAM-System/</loc>
     
     <lastmod>2019-03-23T05:57:48.756Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gaofeng.tech/about/index.html</loc>
-    
-    <lastmod>2019-03-21T06:42:25.582Z</lastmod>
     
   </url>
   
