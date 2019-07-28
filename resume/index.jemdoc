@@ -30,7 +30,7 @@ Find me at [/\#blog My Blog] or:
 
 == About me
 
-I'm currently 1st-year Master student in EE department of Tsinghua University, advised by Prof. [https://nicsefc.ee.tsinghua.edu.cn/people/yu-wang/ Yu Wang]. Before that, I received my B.Eng. here in 2019. 
+I'm currently 1st-year Master student at EE department of Tsinghua University, advised by Prof. [https://nicsefc.ee.tsinghua.edu.cn/people/yu-wang/ Yu Wang]. Before that, I received my B.Eng. here in 2019. 
 
 I was fortunate to be a Research & Development intern at [https://www.momenta.cn/ Momenta] in 2018 Summer, working on the construction of the autonomous driving simulation system. Since September 2018, I have been working in the Robot Group of [https://nicsefc.ee.tsinghua.edu.cn/ NICS-EFC Lab], interested in Single-robot Intelligence and Multi-robot Collaboration. More specifically, I focus on Decentralized SLAM now, where "SLAM" is a type of algorithms that let robots know "where am I", and "decentralized" (or "distributed") refers to speeding up work and expanding application scenarios by running multiple robots simultaneously.
 
@@ -59,4 +59,4 @@ Jincheng Yu, /*Feng Gao*/, Jianfei Cao, Chao Yu, Zhaoliang Zhang, Lu Tian, Zheng
 . *Angular Softmax Loss for End-to-End Speaker Verification*,\n
 Yutian Li, /*Feng Gao*/, Zhijian Ou, Jiasong Sun,\n
 In the 11th International Symposium on Chinese Spoken Language Processing (/[http://iscslp2018.org/ ISCSLP'18]/). November 26-29, 2018, Taipei, Taiwan.\n 
-([publication/1806.03464.pdf pdf])(*[assets/iscslp_2018.jpg Best Student Paper Award]*))
+([publication/1806.03464.pdf paper])(*[assets/iscslp_2018.jpg Best Student Paper Award]*))
