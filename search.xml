@@ -43,8 +43,8 @@
     <content type="text"><![CDATA[[In Chinese]Notes about some feature-based and NN-based Visual-Inertial Odometry Systems: On-Manifold Preintegration for Real-Time Visual-Inertial Odometry. (IEEE Trans. on Robotics) VINS-Mono: A Robust and Versatile Monocular Visual-Inertial State Estimator. (IEEE Trans. on Robotics) Online Temporal Calibration for Monocular Visual-Inertial Systems. (IROS 2018) VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem. (AAAI 2017) Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction. (IROS 2018) Selective Sensor Fusion for Neural Visual-Inertial Odometry. (CVPR 2019)]]></content>
       <categories>
         <category>paper-reading</category>
-        <category>in Chinese</category>
         <category>survey</category>
+        <category>in Chinese</category>
       </categories>
       <tags>
         <tag>VIO</tag>
