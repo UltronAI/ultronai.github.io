@@ -1,6 +1,6 @@
 # Feng Gao's Blog
 
-[Blog](https://gaofeng.tech)
+[Blog](http://blog.feng-gao.com)
 
-[Academic Page](https://gaofeng.tech/resume/index.html)
+[Academic Page](http://feng-gao.com/resume/index.html)
 

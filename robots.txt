@@ -12,4 +12,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://gaofeng.tech/sitemap.xml
+Sitemap: https://feng-gao.com/sitemap.xml
