@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Image Formation]]></title>
+    <url>%2F2019%2F07%2F30%2FImage-Formation%2F</url>
+    <content type="text"><![CDATA[[In Chinese]Study note for the Chapter 2, Image Formation, of Computer Vision: Algorithms and Applications.]]></content>
+      <categories>
+        <category>study-note</category>
+        <category>in Chinese</category>
+      </categories>
+      <tags>
+        <tag>Computer Vision</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[[UL] Lecture1 Autoregressive Model]]></title>
     <url>%2F2019%2F04%2F21%2FUnsupervised-Learning-Berkeley-Lecture1-Autoregressive-Model%2F</url>
     <content type="text"><![CDATA[CS294-158 Deep Unsupervised Learning SP19 @ Berkeley, instructed by Prof. Pieter Abbeel and his students. See slides at this link and course video at Youtube Outline Motivation (Skip over) Simple generative models Histograms Illustration of failure on high-dimensional data Modern neural autoregressive models Training procedure Architecture Likelihood-based models Goal: estimate $p_{data}$ from samples $x^{(1)},…,x^{(n)}\sim p_{data}(x)$, that is, we want to learn a distribution $p$ that allows: Computing $p(x)$ for arbitrary $x$ Sampling $x\sim p(x)$PS: only talk about discrete data in this lecture. What we want: to estimate distributions of complex, high-dimensional data and also computational, statistical efficiency: Efficient training and model representation Expressiveness and generalization Sampling quality and speed Compression rate and speed HistogramSuppose the samples take on values in a finite set ${1,…,k}$]]></content>
@@ -31,8 +43,8 @@
     <content type="text"><![CDATA[[In Chinese]Notes about some feature-based and NN-based Visual-Inertial Odometry Systems: On-Manifold Preintegration for Real-Time Visual-Inertial Odometry. (IEEE Trans. on Robotics) VINS-Mono: A Robust and Versatile Monocular Visual-Inertial State Estimator. (IEEE Trans. on Robotics) Online Temporal Calibration for Monocular Visual-Inertial Systems. (IROS 2018) VINet: Visual-Inertial Odometry as a Sequence-to-Sequence Learning Problem. (AAAI 2017) Vision-Aided Absolute Trajectory Estimation Using an Unsupervised Deep Network with Online Error Correction. (IROS 2018) Selective Sensor Fusion for Neural Visual-Inertial Odometry. (CVPR 2019)]]></content>
       <categories>
         <category>paper-reading</category>
-        <category>survey</category>
         <category>in Chinese</category>
+        <category>survey</category>
       </categories>
       <tags>
         <tag>VIO</tag>
@@ -43,8 +55,8 @@
     <url>%2F2019%2F03%2F16%2FCardiopulmonary-resuscitation-CPR%2F</url>
     <content type="text"><![CDATA[[In Chinese]In case of emergency, how to maintain the life of the patient without breathing and heartbeat and wait for rescue ? 心肺复苏（CPR） 确认患者三无（无意识，无呼吸，无心跳）之后： 大声呼唤，寻求帮助（“快来人，这里有人需要急救”） 说明身份，建立初步信任（“我学过急救知识，我是救护员”） 找人拨打急救电话，并询问结果，判断是否需要派人去接应急救人员（“麻烦您去拨打急救电话，并把结果告诉我”） 寻求另一救护员帮助（“有谁学过急救，过来帮下忙”） 取回AED（“附近有AED的话麻烦拿过来”） 心肺复苏后，发现呼吸心跳恢复，将患者衣物恢复，转成侧卧位，避免窒息 心脏不适如果有人心脏不适，询问情况后，协助其服用随身药物 速效救心丸：正常情况3-5粒，紧急情况10-15粒，舌下含服 硝酸甘油：一次一片，如果无效的话五分钟后再服一片，最多使用三片 中风 没有特定药物 让患者举手，学话，说“一”/微笑，观察肌肉是否正常，如果不正常，大概率是颅脑出现问题，可作初步诊断提供给后续救治的医生 呼吸道异物阻塞]]></content>
       <categories>
-        <category>in Chinese</category>
         <category>skills</category>
+        <category>in Chinese</category>
       </categories>
       <tags>
         <tag>CPR</tag>

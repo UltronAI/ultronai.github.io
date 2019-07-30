@@ -2,63 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://feng-gao.com/about/index.html</loc>
+    <loc>https://blog.feng-gao.com/2019/07/30/Image-Formation/</loc>
+    
+    <lastmod>2019-07-30T05:16:27.223Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.feng-gao.com/about/index.html</loc>
     
     <lastmod>2019-07-28T12:40:01.946Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://feng-gao.com/2019/04/21/Unsupervised-Learning-Berkeley-Lecture1-Autoregressive-Model/</loc>
+    <loc>https://blog.feng-gao.com/2019/04/21/Unsupervised-Learning-Berkeley-Lecture1-Autoregressive-Model/</loc>
     
     <lastmod>2019-04-21T02:45:31.296Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://feng-gao.com/2019/03/16/Cardiopulmonary-resuscitation-CPR/</loc>
+    <loc>https://blog.feng-gao.com/2019/03/16/Cardiopulmonary-resuscitation-CPR/</loc>
     
     <lastmod>2019-03-23T06:24:27.321Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://feng-gao.com/2019/03/13/Two-NN-based-VIO-Methods/</loc>
+    <loc>https://blog.feng-gao.com/2019/03/13/Two-NN-based-VIO-Methods/</loc>
     
     <lastmod>2019-03-23T05:58:02.533Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://feng-gao.com/2019/03/18/Monocular-Visual-Odometry-SLAM-System/</loc>
+    <loc>https://blog.feng-gao.com/2019/03/18/Monocular-Visual-Odometry-SLAM-System/</loc>
     
     <lastmod>2019-03-23T05:57:48.756Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://feng-gao.com/2019/03/19/Some-Key-Publications-of-NICS-EFC-Lab/</loc>
+    <loc>https://blog.feng-gao.com/2019/03/19/Some-Key-Publications-of-NICS-EFC-Lab/</loc>
     
     <lastmod>2019-03-19T01:27:54.837Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://feng-gao.com/2019/03/13/hello-world/</loc>
+    <loc>https://blog.feng-gao.com/2019/03/13/hello-world/</loc>
     
     <lastmod>2019-03-18T07:07:11.748Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://feng-gao.com/tags/index.html</loc>
+    <loc>https://blog.feng-gao.com/tags/index.html</loc>
     
     <lastmod>2019-03-14T11:23:59.489Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://feng-gao.com/categories/index.html</loc>
+    <loc>https://blog.feng-gao.com/categories/index.html</loc>
     
     <lastmod>2019-03-14T11:23:52.108Z</lastmod>
     
