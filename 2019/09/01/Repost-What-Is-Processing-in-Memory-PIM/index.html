@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="##What Is Processing-in-Memory (PIM)Reposted from SIGDA Newsletter Seq 1, 2019. 1234Po-Chun Huang, Assistant Professor, po.chun.huang@mail.ntut.edu.twNational Taipei University of Technology, Taiwan C">
+<meta name="description" content="Reposted from SIGDA Newsletter Seq 1, 2019.">
 <meta name="keywords" content="hardware">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Repost] What Is Processing-in-Memory (PIM)?">
 <meta property="og:url" content="http://blog.feng-gao.com/2019/09/01/Repost-What-Is-Processing-in-Memory-PIM/index.html">
 <meta property="og:site_name" content="Feng&#39;s Blog">
-<meta property="og:description" content="##What Is Processing-in-Memory (PIM)Reposted from SIGDA Newsletter Seq 1, 2019. 1234Po-Chun Huang, Assistant Professor, po.chun.huang@mail.ntut.edu.twNational Taipei University of Technology, Taiwan C">
+<meta property="og:description" content="Reposted from SIGDA Newsletter Seq 1, 2019.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-01T08:29:38.926Z">
+<meta property="og:updated_time" content="2019-09-01T08:33:20.428Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Repost] What Is Processing-in-Memory (PIM)?">
-<meta name="twitter:description" content="##What Is Processing-in-Memory (PIM)Reposted from SIGDA Newsletter Seq 1, 2019. 1234Po-Chun Huang, Assistant Professor, po.chun.huang@mail.ntut.edu.twNational Taipei University of Technology, Taiwan C">
+<meta name="twitter:description" content="Reposted from SIGDA Newsletter Seq 1, 2019.">
 
 
 
@@ -387,8 +387,7 @@
       
 
       
-        <p>##What Is Processing-in-Memory (PIM)<br><strong>Reposted from <a href="https://www.sigda.org/publications/newsletter/" target="_blank" rel="noopener">SIGDA Newsletter</a> Seq 1, 2019.</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Po-Chun Huang, </span><br><span class="line">Assistant Professor, </span><br><span class="line">po.chun.huang@mail.ntut.edu.tw</span><br><span class="line">National Taipei University of Technology, Taiwan</span><br></pre></td></tr></table></figure>
+        <p><strong>Reposted from <a href="https://www.sigda.org/publications/newsletter/" target="_blank" rel="noopener">SIGDA Newsletter</a> Seq 1, 2019.</strong><br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Po-Chun Huang, </span><br><span class="line">Assistant Professor, </span><br><span class="line">po.chun.huang@mail.ntut.edu.tw</span><br><span class="line">National Taipei University of Technology, Taiwan</span><br></pre></td></tr></table></figure></p>
 <p>Classical computer architecture used to adopt separate hardware components for computation (e.g., CPUs and GPGPUs) and those for data storage (e.g., DRAM-based main memory or disk-based secondary storage) [1]. As a result, the performance of modern data-intensive applications is often limited by the speeds of the memory/storage devices, as well as the bandwidth of the datapath between CPUs/GPUs and memory/storage, thereby creating the well-known von Neumann bottleneck [2]. To overcome this problem, <strong>the processing in memory (PIM) technology is proposed to incorporate the processing capability to random-access memory (RAM) in a single chip</strong> [2]. By moving some computation from processor to memory [3], the overheads to transmit data between processor and memory can be remarkably alleviated. As reported by prior literature [2], the PIM technology becomes more feasible as the main memory capacity increases, and are especially valuable for the emerging data-centric computing scenarios, such as data mining and machine learning applications.</p>
 <p>As early proposals of PIM introduce fully programmable computation units (e.g., general-purpose processors or field programmable gate arrays) to the memory, the design efforts could be high, and the changes to the hardware/software stack might be inevitable [7]. Thus, <strong>the recent development of PIM technology is driven by the emergence of modern nonvolatile memories (NVMs), such as phase-change memory (PCM), metal-oxide resistive RAM (ReRAM), and spin-transfer torque RAM (STT-RAM), which can directly perform logical and arithmetic operations in memory</strong> [1]. Among these choices, ReRAM can support efficient matrix–vector multiply operations [1], and is widely used for neural computation [4], graphic algorithms [5], or performing bulk bitwise operations [6]. Nevertheless, the PIM technology is not preferred by all flavors of computations against CPUs/GPUs, and extra research efforts are needed to fully unleash its power.</p>
 <p>Observing the heterogeneous computation capabilities of CPUs/GPGPUs and those of PIM, it is a brilliant approach to wisely determine whether to execute specific instructions, referred to as PIM-enabled instructions (PEIs), by PIM on the main memory, as suggested by Ahn et al. [7]. With PEIs, programmers can assign the instructions that should be executed by PIM, therefore optimizing the system performance. Representative examples of PEIs include the increment of integers, getting the minimum element, addition of floating-point numbers, computation of Euclidean distance, and computation of the dot product of vectors [7].</p>
