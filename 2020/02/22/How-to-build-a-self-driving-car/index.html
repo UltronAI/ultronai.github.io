@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="hardware,">
+  <meta name="keywords" content="Self-driving,">
 
 
 
@@ -82,18 +82,18 @@
 
 
 
-<meta name="description" content="Reposted from SIGDA Newsletter Seq 1, 2019.">
-<meta name="keywords" content="hardware">
+<meta name="description" content=":triangular_flag_on_post: 立个Flag：在一年内做一个基于视觉的嵌入式自动驾驶小车:car: ，包括感知和决策 进度  确定硬件方案  硬件平台 Nvidia Jetson Nano ? 存储和CPU ?  感知算法决策算法测试场景">
+<meta name="keywords" content="Self-driving">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Repost] What Is Processing-in-Memory (PIM)?">
-<meta property="og:url" content="http://blog.feng-gao.com/2019/09/01/Repost-What-Is-Processing-in-Memory-PIM/index.html">
+<meta property="og:title" content="How to build a self-driving car">
+<meta property="og:url" content="http://blog.feng-gao.com/2020/02/22/How-to-build-a-self-driving-car/index.html">
 <meta property="og:site_name" content="Feng&#39;s Blog">
-<meta property="og:description" content="Reposted from SIGDA Newsletter Seq 1, 2019.">
+<meta property="og:description" content=":triangular_flag_on_post: 立个Flag：在一年内做一个基于视觉的嵌入式自动驾驶小车:car: ，包括感知和决策 进度  确定硬件方案  硬件平台 Nvidia Jetson Nano ? 存储和CPU ?  感知算法决策算法测试场景">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-01T08:47:52.604Z">
+<meta property="og:updated_time" content="2020-02-22T08:09:45.670Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[Repost] What Is Processing-in-Memory (PIM)?">
-<meta name="twitter:description" content="Reposted from SIGDA Newsletter Seq 1, 2019.">
+<meta name="twitter:title" content="How to build a self-driving car">
+<meta name="twitter:description" content=":triangular_flag_on_post: 立个Flag：在一年内做一个基于视觉的嵌入式自动驾驶小车:car: ，包括感知和决策 进度  确定硬件方案  硬件平台 Nvidia Jetson Nano ? 存储和CPU ?  感知算法决策算法测试场景">
 
 
 
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.feng-gao.com/2019/09/01/Repost-What-Is-Processing-in-Memory-PIM/">
+  <link rel="canonical" href="http://blog.feng-gao.com/2020/02/22/How-to-build-a-self-driving-car/">
 
 
 
 
 
-  <title>[Repost] What Is Processing-in-Memory (PIM)? | Feng's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>How to build a self-driving car | Feng's Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -298,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.feng-gao.com/2019/09/01/Repost-What-Is-Processing-in-Memory-PIM/">
+    <link itemprop="mainEntityOfPage" href="http://blog.feng-gao.com/2020/02/22/How-to-build-a-self-driving-car/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feng Gao">
@@ -315,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[Repost] What Is Processing-in-Memory (PIM)?</h1>
+          <h1 class="post-title" itemprop="name headline">How to build a self-driving car</h1>
         
 
         <div class="post-meta">
@@ -327,8 +327,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-01T16:20:30+08:00">
-                2019-09-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-22T15:54:07+08:00">
+                2020-02-22
               </time>
             
 
@@ -350,8 +350,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/What-Is/" itemprop="url" rel="index">
-                    <span itemprop="name">What Is</span>
+                  <a href="/categories/Project/" itemprop="url" rel="index">
+                    <span itemprop="name">Project</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/in-Chinese/" itemprop="url" rel="index">
+                    <span itemprop="name">in Chinese</span>
                   </a>
                 </span>
 
@@ -387,23 +398,15 @@
       
 
       
-        <p>Reposted from <a href="https://www.sigda.org/publications/newsletter/" target="_blank" rel="noopener">SIGDA Newsletter</a> Seq 1, 2019.<br><a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Po-Chun Huang, </span><br><span class="line">Assistant Professor, </span><br><span class="line">po.chun.huang@mail.ntut.edu.tw</span><br><span class="line">National Taipei University of Technology, Taiwan</span><br></pre></td></tr></table></figure>
-<p>Classical computer architecture used to adopt separate hardware components for computation (e.g., CPUs and GPGPUs) and those for data storage (e.g., DRAM-based main memory or disk-based secondary storage) [1]. As a result, the performance of modern data-intensive applications is often limited by the speeds of the memory/storage devices, as well as the bandwidth of the datapath between CPUs/GPUs and memory/storage, thereby creating the well-known von Neumann bottleneck [2]. To overcome this problem, <strong>the processing in memory (PIM) technology is proposed to incorporate the processing capability to random-access memory (RAM) in a single chip</strong> [2]. By moving some computation from processor to memory [3], the overheads to transmit data between processor and memory can be remarkably alleviated. As reported by prior literature [2], the PIM technology becomes more feasible as the main memory capacity increases, and are especially valuable for the emerging data-centric computing scenarios, such as data mining and machine learning applications.</p>
-<p>As early proposals of PIM introduce fully programmable computation units (e.g., general-purpose processors or field programmable gate arrays) to the memory, the design efforts could be high, and the changes to the hardware/software stack might be inevitable [7]. Thus, <strong>the recent development of PIM technology is driven by the emergence of modern nonvolatile memories (NVMs), such as phase-change memory (PCM), metal-oxide resistive RAM (ReRAM), and spin-transfer torque RAM (STT-RAM), which can directly perform logical and arithmetic operations in memory</strong> [1]. Among these choices, ReRAM can support efficient matrix–vector multiply operations [1], and is widely used for neural computation [4], graphic algorithms [5], or performing bulk bitwise operations [6]. Nevertheless, the PIM technology is not preferred by all flavors of computations against CPUs/GPUs, and extra research efforts are needed to fully unleash its power.</p>
-<p>Observing the heterogeneous computation capabilities of CPUs/GPGPUs and those of PIM, it is a brilliant approach to wisely determine whether to execute specific instructions, referred to as PIM-enabled instructions (PEIs), by PIM on the main memory, as suggested by Ahn et al. [7]. With PEIs, programmers can assign the instructions that should be executed by PIM, therefore optimizing the system performance. Representative examples of PEIs include the increment of integers, getting the minimum element, addition of floating-point numbers, computation of Euclidean distance, and computation of the dot product of vectors [7].</p>
-<p>The PIM technology is especially suitable for applications in the artificial intelligence area, as observed by [1], [4], [5]. This is because that certain NVMs, such as ReRAM, can inherently support neural computation with its crossbar physical architecture. By allocating a full function (FF) subarray in the ReRAM space [1], a remarkable improvement of energy saving is observed at slight area overheads. Because the FF subarray is established dynamically in the ReRAM, the dynamic morphing of the ReRAM space for storing data and that for keeping the FF subarray becomes possible, allowing further performance enhancements.</p>
-<p>In next-generation computing systems with explosive scales, the datapath between processing components and memory/storage components might become one of the major performance bottlenecks. In this case, PIM is promising to assist the establishing of active memory cubes (AMCs) [8], which provides not only data storage but also energy-efficient computation functionalities in a single component. A plural of AMCs can then be interconnected to construct a coherent and scalable main memory device for performance-demanding applications such as scientific computation [8]. Furthermore, the importance of the PIM technology is expected to be emphasized in the foreseeable future, due to the rapidly growing scale of computing systems.</p>
-<p>As new applications keep emerging on the horizon, existing computer architecture is pushed further to deliver better performance and energy efficiency for the whole system. Among the potential technologies, PIM provides amazingly high performance and energy efficiency, and is a promising candidate for the key technologies in data-centric computing scenarios. We believe that the PIM technology is still worth more research attentions to reveal its value to a wider spectrum of applications. </p>
-<p>[1] Chi, Ping, et al. “Prime: A novel processing-in-memory architecture for neural network computation in ReRAM-based main memory.” ACM SIGARCH Computer Architecture News. Vol. 44. No. 3. IEEE Press, 2016.</p>
-<p>[2] Margaret Rouse, “What is processing in memory (PIM)?,” online available at: <a href="https://searchbusinessanalytics.techtarget.com/definition/processing-in-memory-PIM" target="_blank" rel="noopener">https://searchbusinessanalytics.techtarget.com/definition/processing-in-memory-PIM</a></p>
-<p>[3] Xu Yang, Yumin Hou, and Hu He, “A Processing-in-Memory Architecture Programming Paradigm for Wireless Internet-of-Things Applications,” MDPI Sensors, Vol. 19, No. 140, 2019.</p>
-<p>[4] Song, Linghao, et al. “Pipelayer: A pipelined ReRAM-based accelerator for deep learning.” 2017 IEEE International Symposium on High Performance Computer Architecture (HPCA). IEEE, 2017.</p>
-<p>[5] Long, Yun, Taesik Na, and Saibal Mukhopadhyay. “ReRAM-based processing-in-memory architecture for recurrent neural network acceleration.” IEEE Transactions on Very Large Scale Integration (VLSI) Systems 26.12 (2018): 2781-2794.</p>
-<p>[6] Li, Shuangchen, et al. “Pinatubo: A processing-in-memory architecture for bulk bitwise operations in emerging non-volatile memories.” Proceedings of the 53rd Annual Design Automation Conference. ACM, 2016.</p>
-<p>[7] J. Ahn, S. Yoo, O. Mutlu and K. Choi, “PIM-enabled instructions: A low-overhead, locality-aware processing-in-memory architecture,” 2015 ACM/IEEE 42nd Annual International Symposium on Computer Architecture (ISCA), Portland, OR, 2015, pp. 336–348.</p>
-<p>[8] R. Nair et al., “Active Memory Cube: A processing-in-memory architecture for exascale systems,” IBM Journal of Research and Development, vol. 59, no. 2/3, pp. 17:1-17:14, March–May 2015.</p>
-
+        <p>:triangular_flag_on_post: 立个Flag：在一年内做一个基于视觉的嵌入式自动驾驶小车:car: ，包括感知和决策</p>
+<h2 id="进度"><a href="#进度" class="headerlink" title="进度"></a>进度</h2><ul>
+<li style="list-style: none"><input type="checkbox"> 确定硬件方案</li>
+</ul>
+<h2 id="硬件平台"><a href="#硬件平台" class="headerlink" title="硬件平台"></a>硬件平台</h2><ul>
+<li>Nvidia Jetson Nano ?</li>
+<li>存储和CPU ?</li>
+</ul>
+<h2 id="感知算法"><a href="#感知算法" class="headerlink" title="感知算法"></a>感知算法</h2><h2 id="决策算法"><a href="#决策算法" class="headerlink" title="决策算法"></a>决策算法</h2><h2 id="测试场景"><a href="#测试场景" class="headerlink" title="测试场景"></a>测试场景</h2>
       
     </div>
     
@@ -420,7 +423,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hardware/" rel="tag"># hardware</a>
+            <a href="/tags/Self-driving/" rel="tag"># Self-driving</a>
           
         </div>
       
@@ -448,8 +451,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/19/Some-Key-Publications-of-NICS-EFC-Lab/" rel="next" title="Some Key Publications of NICS-EFC Lab">
-                <i class="fa fa-chevron-left"></i> Some Key Publications of NICS-EFC Lab
+              <a href="/2019/09/01/Repost-What-Is-Processing-in-Memory-PIM/" rel="next" title="[Repost] What Is Processing-in-Memory (PIM)?">
+                <i class="fa fa-chevron-left"></i> [Repost] What Is Processing-in-Memory (PIM)?
               </a>
             
           </div>
@@ -457,10 +460,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/22/How-to-build-a-self-driving-car/" rel="prev" title="How to build a self-driving car">
-                How to build a self-driving car <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -512,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -625,6 +633,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#进度"><span class="nav-number">1.</span> <span class="nav-text">进度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#硬件平台"><span class="nav-number">2.</span> <span class="nav-text">硬件平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感知算法"><span class="nav-number">3.</span> <span class="nav-text">感知算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策算法"><span class="nav-number">4.</span> <span class="nav-text">决策算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试场景"><span class="nav-number">5.</span> <span class="nav-text">测试场景</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
