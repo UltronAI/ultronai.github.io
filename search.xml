@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[How to build a self-driving car]]></title>
     <url>%2F2020%2F02%2F22%2FHow-to-build-a-self-driving-car%2F</url>
-    <content type="text"><![CDATA[:triangular_flag_on_post: 目标：在一年内做一个基于视觉的嵌入式自动驾驶小车:car: ，包括感知和决策 :computer: 代码：https://github.com/UltronAI/self-driving-car 进度 确定硬件方案 硬件平台 Nvidia Jetson Nano ? 存储和CPU ? 感知算法决策算法测试场景]]></content>
+    <content type="text"><![CDATA[:triangular_flag_on_post: 目标：在一年内做一个基于视觉的嵌入式自动驾驶小车:car: ，包括多层次的感知和决策 :computer: 代码：https://github.com/UltronAI/self-driving-car 进度 确定硬件方案 硬件平台 Nvidia Jetson Nano ? 存储和CPU ? 感知算法决策算法测试场景]]></content>
       <categories>
         <category>project</category>
         <category>in Chinese</category>
