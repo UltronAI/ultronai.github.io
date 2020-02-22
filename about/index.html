@@ -308,7 +308,25 @@
 <p><img src="/assets/about/head.jpg" alt="My Photo" style="width: 180px; FLOAT: left; MARGIN-BOTTOM: 20px; MARGIN-RIGHT: 20px"> </p>
 <p>I’m a 1st-year Master student in the Department of Electronic Engineering of Tsinghua University, advised by <a href="https://nicsefc.ee.tsinghua.edu.cn/people/yu-wang" target="_blank" rel="noopener">Prof. Yu Wang</a>. Previously, I received my bachelor degree of Electronic Engineering from Tsinghua University in 2019.<br>My research interests include <strong>computer vision for robotics</strong> and <strong>multi-robot collaborative intelligence</strong>. My <em>life-long</em> dream is to build Artificial General Intelligence (AGI).</p>
 <p>In addition to research, I like to watch movies, anime and TV shows. I also like reading, fitness and photography. I think every day of life should be spent earnestly and happily.</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
         
       </div>
       

@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/skills/" itemprop="url" rel="index">
-                    <span itemprop="name">skills</span>
+                  <a href="/categories/in-Chinese/" itemprop="url" rel="index">
+                    <span itemprop="name">in Chinese</span>
                   </a>
                 </span>
 
@@ -372,8 +372,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/in-Chinese/" itemprop="url" rel="index">
-                    <span itemprop="name">in Chinese</span>
+                  <a href="/categories/skills/" itemprop="url" rel="index">
+                    <span itemprop="name">skills</span>
                   </a>
                 </span>
 
@@ -438,7 +438,25 @@
 <p><img src="/assets/posts/AED/20190316162114.jpg" alt></p>
 <p><img src="/assets/posts/AED/20190316162120.jpg" alt></p>
 <p><img src="/assets/posts/AED/20190316162127.jpg" alt></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
       
     </div>
     

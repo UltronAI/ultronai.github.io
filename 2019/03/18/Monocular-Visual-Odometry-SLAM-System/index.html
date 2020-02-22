@@ -442,7 +442,25 @@
 </li>
 </ul>
 <p><img src="/assets/posts/VIO_0318/vio_页面_01.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_02.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_03.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_04.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_05.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_06.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_07.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_08.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_09.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_10.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_11.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_12.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_13.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_14.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_15.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_16.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_17.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_18.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_19.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_20.png" alt><br><img src="/assets/posts/VIO_0318/vio_页面_21.png" alt></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
       
     </div>
     

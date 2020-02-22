@@ -399,8 +399,8 @@
 
       
         <p>This is the blog to record this project. The code page is <a href="https://github.com/UltronAI/self-driving-car" target="_blank" rel="noopener">here</a>.<br><a id="more"></a></p>
-<p>:triangular_flag_on_post: 目标：在一年内做一个基于视觉的嵌入式自动驾驶小车:car: ，包括多层次的感知和决策</p>
-<p>:computer: 代码：<a href="https://github.com/UltronAI/self-driving-car" target="_blank" rel="noopener">https://github.com/UltronAI/self-driving-car</a></p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png?v8">🚩</span> 目标：在一年内做一个基于视觉的嵌入式自动驾驶小车<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f697.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f697.png?v8">🚗</span> ，包括多层次的感知和决策</p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png?v8">💻</span> 代码：<a href="https://github.com/UltronAI/self-driving-car" target="_blank" rel="noopener">https://github.com/UltronAI/self-driving-car</a></p>
 <h2 id="进度"><a href="#进度" class="headerlink" title="进度"></a>进度</h2><ul>
 <li style="list-style: none"><input type="checkbox"> 确定硬件方案</li>
 </ul>
@@ -408,7 +408,25 @@
 <li>Nvidia Jetson Nano ?</li>
 <li>存储和CPU ?</li>
 </ul>
-<h2 id="感知算法"><a href="#感知算法" class="headerlink" title="感知算法"></a>感知算法</h2><h2 id="决策算法"><a href="#决策算法" class="headerlink" title="决策算法"></a>决策算法</h2><h2 id="测试场景"><a href="#测试场景" class="headerlink" title="测试场景"></a>测试场景</h2>
+<h2 id="感知算法"><a href="#感知算法" class="headerlink" title="感知算法"></a>感知算法</h2><h2 id="决策算法"><a href="#决策算法" class="headerlink" title="决策算法"></a>决策算法</h2><h2 id="测试场景"><a href="#测试场景" class="headerlink" title="测试场景"></a>测试场景</h2><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
       
     </div>
     
